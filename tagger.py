@@ -15,7 +15,7 @@ driver.get(URL)
 assert "Malayalam" in driver.title
 
 dirList = [x[0] for x in os.walk("./Data")]    
-dirList = dirList[1:]
+dirList = dirList[2:]
 
 for domains in dirList:
 	if not os.path.exists(CORPUS):
@@ -39,4 +39,3 @@ for domains in dirList:
 				print(line.string)
 				s+=line.string+'\n'
 		f.write(s.encode("UTF-8"))
-	break
